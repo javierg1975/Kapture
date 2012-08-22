@@ -12,7 +12,6 @@ project/boot/
 project/plugins/project/
 .idea
 .idea_modules
-project/*
 
 # Scala-IDE specific
 .scala_dependencies
