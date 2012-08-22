@@ -66,7 +66,7 @@ traceLevel := 20
 
 logLevel := Level.Info
 
-mainClass in Compile := Some("kaptest.radar.util.Boot")
+mainClass in Compile := Some("kapture.util.Boot")
 
 artifactName := { (config: String, module: ModuleID, artifact: Artifact) =>
   artifact.name + "." + artifact.extension
