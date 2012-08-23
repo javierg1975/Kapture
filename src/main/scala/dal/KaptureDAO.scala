@@ -10,4 +10,8 @@ import core._
 import org.bson.types.ObjectId
 
 
-object KaptureDAO extends SalatDAO[Kapture, ObjectId](collection = using(""))
+object KaptureDAO extends SalatDAO[Kapture, ObjectId](collection = using("kapture"))
+
+object UserDAO extends SalatDAO[User, ObjectId](collection = using("kapture-user"))
+
+object CommentDAO extends SalatDAO[Comment, ObjectId](collection = using("kapture-comment"))

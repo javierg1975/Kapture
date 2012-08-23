@@ -8,7 +8,7 @@ object WebImageRenderer{
   val bounds = "300x300"
 
 
-  def signatureFor(url: String) = DigestUtils.md5Hex((privateKey + url).getBytes("UTF-8"))
+  def signatureFor(url: String) = DigestUtils.md5Hex((privateKey + "+" + url).getBytes("UTF-8"))
 
-  def imgageUrl(url: String) = List("http://api.url2png.com/v3", apiKey, signatureFor(url), bounds, url).mkString("/")
+  def imageUrl(url: String) = List("http://api.url2png.com/v3", apiKey, signatureFor(url), bounds, url).mkString("/")
 }
