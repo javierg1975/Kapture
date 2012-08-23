@@ -6,7 +6,7 @@ import util.web.{RSSGenerator, WebImageRenderer}
 import cc.spray.directives.PathElement
 import cc.spray.typeconversion.SprayJsonSupport
 import dal.{CommentDAO, UserDAO, KaptureDAO}
-import core.{Comment, Kapture}
+import core.{KaptureResponse, Comment, Kapture}
 import org.bson.types.ObjectId
 import com.mongodb.casbah.commons.MongoDBObject
 import util.json.KaptureProtocol._
@@ -54,7 +54,7 @@ trait KaptureUI extends Directives with SprayJsonSupport {
               //ignore user for now, use Lauren as default
               //UserDAO.findOne(MongoDBObject("name" -> userName))
 
-              new UserDAO(user.get).kaptures
+              KaptureResponse(new UserDAO(user.get).kaptures)
             }
           }~
           post{

@@ -9,3 +9,4 @@ case class Comment(@Key("_id") id: ObjectId = new ObjectId, commentStr: String, 
 
 case class User(@Key("_id") id: ObjectId = new ObjectId, name: String, email: String, pictureId: Option[String] = None)
 
+case class KaptureResponse(kaptures: List[Kapture])

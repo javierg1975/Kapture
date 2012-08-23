@@ -1,7 +1,7 @@
 package util.json
 
 import cc.spray.json._
-import core.{Comment, User, Kapture}
+import core.{KaptureResponse, Comment, User, Kapture}
 import org.bson.types.ObjectId
 
 object KaptureProtocol extends DefaultJsonProtocol {
@@ -21,5 +21,6 @@ object KaptureProtocol extends DefaultJsonProtocol {
   implicit val kaptureFormat = jsonFormat6(Kapture)
   implicit val userProtocol = jsonFormat4(User)
   implicit val commentProtocol = jsonFormat4(Comment)
+  implicit val kaptureReponseFormat = jsonFormat1(KaptureResponse)
 
 }
