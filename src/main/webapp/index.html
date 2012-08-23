@@ -31,13 +31,6 @@
   <body>
     <div class="container">
 
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit" style="display: none;">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-      </div>
-
       <div class="row">
         <div class="span2">
           <a href="#"> <!-- the thumbnail class helps put the logo -->
@@ -45,14 +38,14 @@
           </a>
         </div>
         <div class="span6">
-          <h1>Lorin's Kapture Board</h1>
+          <h2>Lorin's Kapture Board</h2>
         </div>
       </div>
 
       <!-- Example row of columns -->
       <div class="clearfix kapture-list">
         <div class="span3 kapture-item">
-          <h2>Title1</h2>
+          <h3></h3>
           <div class="btn-share-this"><span class="st_sharethis" displayText=""></span></div>
           <a><img alt=""></a>
        </div>
@@ -87,35 +80,16 @@
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript">stLight.options({publisher: "ur-d07ea1d1-a81b-29e6-d904-c5e548d76d59"}); </script>
 
-    <script>
-    // kaptures is an array and will trigger an iteration
-    // var data = {
-    //   kaptures:[
-    //     { "id": { "_id": "503669ae0364dc9799f0a95d" }, "ownerId": { "_id": "50364efd0364340dc41f21e0" }, "title": "A test Kapture", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis leo at massa interdum quis blandit turpis laoreet. Suspendisse sodales nisi eu magna fringilla nec commodo lacus placerat. Sed bibendum sagittis elementum. Aenean sit amet lacus varius sapien porta laoreet. In eleifend tincidunt tempus. Praesent ultrices mauris non turpis vestibulum tincidunt porttitor quam ultricies.", "content": "http://api.url2png.com/v3/P5035480CECD5B/7b9245977a27acb7e004ecc5d834f61b/300x300/kaptest.com", "contentUri": "kaptest.com" },
-    //     { "id": { "_id": "503669ae0364dc9799f0a95e" }, "ownerId": { "_id": "50364efd0364340dc41f21e0" }, "title": "A test Kapture", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis leo at massa interdum quis blandit turpis laoreet. Suspendisse sodales nisi eu magna fringilla nec commodo lacus placerat. Sed bibendum sagittis elementum. Aenean sit amet lacus varius sapien porta laoreet. In eleifend tincidunt tempus. Praesent ultrices mauris non turpis vestibulum tincidunt porttitor quam ultricies.", "content": "http://api.url2png.com/v3/P5035480CECD5B/198fb61a5f84023a78414634e1c37106/300x300/nytimes.com", "contentUri": "nytimes.com" },
-    //     { "id": { "_id": "503669ae0364dc9799f0a95f" }, "ownerId": { "_id": "50364efd0364340dc41f21e0" }, "title": "A test Kapture", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis leo at massa interdum quis blandit turpis laoreet. Suspendisse sodales nisi eu magna fringilla nec commodo lacus placerat. Sed bibendum sagittis elementum. Aenean sit amet lacus varius sapien porta laoreet. In eleifend tincidunt tempus. Praesent ultrices mauris non turpis vestibulum tincidunt porttitor quam ultricies.", "content": "http://api.url2png.com/v3/P5035480CECD5B/e171e1d3a1d29fb65c9e8ab26989dd94/300x300/cnn.com", "contentUri": "cnn.com" }
-    //   ]
-    // };
-
-
-  </script>
-
     <script type="text/javascript">
       $(document).ready(function() {
-          //$.getJSON('api/user/[some-user-name-here]/kaptures', function(data){
-
-     var data = {
-       kaptures:[
-         { "id": { "_id": "503669ae0364dc9799f0a95d" }, "ownerId": { "_id": "50364efd0364340dc41f21e0" }, "title": "A test Kapture", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis leo at massa interdum quis blandit turpis laoreet. Suspendisse sodales nisi eu magna fringilla nec commodo lacus placerat. Sed bibendum sagittis elementum. Aenean sit amet lacus varius sapien porta laoreet. In eleifend tincidunt tempus. Praesent ultrices mauris non turpis vestibulum tincidunt porttitor quam ultricies.", "content": "http://api.url2png.com/v3/P5035480CECD5B/7b9245977a27acb7e004ecc5d834f61b/300x300/kaptest.com", "contentUri": "kaptest.com" },
-         { "id": { "_id": "503669ae0364dc9799f0a95e" }, "ownerId": { "_id": "50364efd0364340dc41f21e0" }, "title": "A test Kapture", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis leo at massa interdum quis blandit turpis laoreet. Suspendisse sodales nisi eu magna fringilla nec commodo lacus placerat. Sed bibendum sagittis elementum. Aenean sit amet lacus varius sapien porta laoreet. In eleifend tincidunt tempus. Praesent ultrices mauris non turpis vestibulum tincidunt porttitor quam ultricies.", "content": "http://api.url2png.com/v3/P5035480CECD5B/198fb61a5f84023a78414634e1c37106/300x300/nytimes.com", "contentUri": "nytimes.com" },
-         { "id": { "_id": "503669ae0364dc9799f0a95f" }, "ownerId": { "_id": "50364efd0364340dc41f21e0" }, "title": "A test Kapture", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis leo at massa interdum quis blandit turpis laoreet. Suspendisse sodales nisi eu magna fringilla nec commodo lacus placerat. Sed bibendum sagittis elementum. Aenean sit amet lacus varius sapien porta laoreet. In eleifend tincidunt tempus. Praesent ultrices mauris non turpis vestibulum tincidunt porttitor quam ultricies.", "content": "http://api.url2png.com/v3/P5035480CECD5B/e171e1d3a1d29fb65c9e8ab26989dd94/300x300/cnn.com", "contentUri": "cnn.com" }
-       ]
-     };
-
+          $.ajax('api/user/christian/kaptures', {
+            dataType: 'json',
+            //data: data,
+            success: function(data) {
               var directive = {
                 '.kapture-item':{
                   'kapture<-kaptures' : {
-                    'h2' : 'kapture.title',
+                    'h3' : 'kapture.title',
                     'a@href' : 'kapture.contentUri',
                     'img@src' : 'kapture.content'
                   }
@@ -123,8 +97,17 @@
               };
 
               $('div.kapture-list').render(data, directive);
-          //});
-        });
+            }
+          });
+          
+          /*var data = {
+             kaptures:[
+               { "id": { "_id": "503669ae0364dc9799f0a95d" }, "ownerId": { "_id": "50364efd0364340dc41f21e0" }, "title": "A test Kapture", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis leo at massa interdum quis blandit turpis laoreet. Suspendisse sodales nisi eu magna fringilla nec commodo lacus placerat. Sed bibendum sagittis elementum. Aenean sit amet lacus varius sapien porta laoreet. In eleifend tincidunt tempus. Praesent ultrices mauris non turpis vestibulum tincidunt porttitor quam ultricies.", "content": "http://api.url2png.com/v3/P5035480CECD5B/7b9245977a27acb7e004ecc5d834f61b/300x300/kaptest.com", "contentUri": "kaptest.com" },
+               { "id": { "_id": "503669ae0364dc9799f0a95e" }, "ownerId": { "_id": "50364efd0364340dc41f21e0" }, "title": "A test Kapture", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis leo at massa interdum quis blandit turpis laoreet. Suspendisse sodales nisi eu magna fringilla nec commodo lacus placerat. Sed bibendum sagittis elementum. Aenean sit amet lacus varius sapien porta laoreet. In eleifend tincidunt tempus. Praesent ultrices mauris non turpis vestibulum tincidunt porttitor quam ultricies.", "content": "http://api.url2png.com/v3/P5035480CECD5B/198fb61a5f84023a78414634e1c37106/300x300/nytimes.com", "contentUri": "nytimes.com" },
+               { "id": { "_id": "503669ae0364dc9799f0a95f" }, "ownerId": { "_id": "50364efd0364340dc41f21e0" }, "title": "A test Kapture", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis leo at massa interdum quis blandit turpis laoreet. Suspendisse sodales nisi eu magna fringilla nec commodo lacus placerat. Sed bibendum sagittis elementum. Aenean sit amet lacus varius sapien porta laoreet. In eleifend tincidunt tempus. Praesent ultrices mauris non turpis vestibulum tincidunt porttitor quam ultricies.", "content": "http://api.url2png.com/v3/P5035480CECD5B/e171e1d3a1d29fb65c9e8ab26989dd94/300x300/cnn.com", "contentUri": "cnn.com" }
+             ]
+           };*/
+      });
     </script>
   </body>
 </html>
