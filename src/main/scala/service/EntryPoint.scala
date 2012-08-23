@@ -2,7 +2,7 @@ package service
 
 import cc.spray.Directives
 import cc.spray.http.FormData
-import util.web.WebImageRenderer
+import util.web.{RSSGenerator, WebImageRenderer}
 import cc.spray.directives.PathElement
 import cc.spray.typeconversion.SprayJsonSupport
 import dal.{UserDAO, KaptureDAO}
@@ -48,18 +48,23 @@ trait KaptureUI extends Directives with SprayJsonSupport {
 
         }
       }~
-      path("user" / PathElement / "kaptures"){ userName =>
-        get{
-          completeWith{
-            //ignore user for now, use Lauren as default
-            //UserDAO.findOne(MongoDBObject("name" -> userName))
+      pathPrefix("user" / PathElement) {userName =>
+        path("kaptures"){
+          get{
+            completeWith{
+              //ignore user for now, use Lauren as default
+              //UserDAO.findOne(MongoDBObject("name" -> userName))
 
-            KaptureDAO.find(MongoDBObject("ownerId" -> user.get.id)).toList
-
+              new UserDAO(user.get).kaptures
+            }
+          }
+        }~
+        path("rss"){
+          get{
+            completeWith(RSSGenerator.feedForUser(user.get))
           }
         }
       }
-
     }
   }
 }

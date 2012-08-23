@@ -28,6 +28,7 @@ libraryDependencies ++= Seq(
     "com.novus" %% "salat" % "1.9.1-SNAPSHOT",
     "org.squeryl" %% "squeryl" % "0.9.5-2",
     "mysql" % "mysql-connector-java" % "5.1.10",
+    "rome" % "rome" % "1.0",
     "c3p0" % "c3p0" % "0.9.1.2"
 )
 
