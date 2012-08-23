@@ -5,8 +5,8 @@ import cc.spray.http.FormData
 import util.web.{RSSGenerator, WebImageRenderer}
 import cc.spray.directives.PathElement
 import cc.spray.typeconversion.SprayJsonSupport
-import dal.{UserDAO, KaptureDAO}
-import core.Kapture
+import dal.{CommentDAO, UserDAO, KaptureDAO}
+import core.{Comment, Kapture}
 import org.bson.types.ObjectId
 import com.mongodb.casbah.commons.MongoDBObject
 import util.json.KaptureProtocol._
@@ -21,7 +21,7 @@ trait KaptureUI extends Directives with SprayJsonSupport {
 
   //Cheat!
   val user = UserDAO.findOne(MongoDBObject("name" -> "Lauren"))
-
+  val poster = UserDAO.findOne(MongoDBObject("name" -> "Scott"))
   //
 
   val entryPoint = {
@@ -29,7 +29,24 @@ trait KaptureUI extends Directives with SprayJsonSupport {
       getFromDirectory("src/main/webapp/")
     }~
     pathPrefix("api"){
+      pathPrefix("kapture" / PathElement) {kaptureId =>
+        path("comment"){
+          post{
+            content(as[FormData]) { formData =>
+              val comment = formData.fields("comment")
 
+              completeWith{
+                CommentDAO.insert(Comment(commentStr = comment, kaptureId = new ObjectId(kaptureId), posterId = poster.get.id))
+              }
+            }
+          }~
+            get{
+              completeWith{
+                CommentDAO.find(MongoDBObject("kaptureId" -> kaptureId)).toList
+              }
+            }
+        }
+      }~
       pathPrefix("user" / PathElement) {userName =>
         path("kaptures"){
           get{
