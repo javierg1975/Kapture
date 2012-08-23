@@ -1,4 +1,4 @@
-package kapture.service
+package service
 
 import cc.spray.Directives
 
@@ -8,11 +8,7 @@ trait Debugger {
   val log = LoggerFactory.getLogger("Debugger")
 }
 
-
-
 trait KaptureUI extends Directives with Debugger {
-
-
 
   val entryPoint = {
     pathPrefix(""){

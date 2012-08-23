@@ -1,11 +1,12 @@
-package kapture.util
+package util
 
 import akka.actor.{Props, ActorSystem}
 import cc.spray.{SprayCanRootService, HttpService}
 import cc.spray.io.IoWorker
 import cc.spray.can.server.HttpServer
 import cc.spray.io.pipelines.MessageHandlerDispatch
-import kapture.service.KaptureUI
+import service.KaptureUI
+import cc.spray.can.client.HttpClient
 
 object Boot extends App {
 
@@ -28,6 +29,11 @@ object Boot extends App {
   )
 
   val ioWorker = new IoWorker(system).start()
+
+  val httpClient = system.actorOf(
+    props = Props(new HttpClient(ioWorker)),
+    name = "http-client"
+  )
 
   val server = system.actorOf(
     Props(new HttpServer(ioWorker, MessageHandlerDispatch.SingletonHandler(rootService))),

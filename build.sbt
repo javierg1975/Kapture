@@ -1,6 +1,6 @@
 import com.typesafe.startscript.StartScriptPlugin
 
-name := "DRADIS"
+name := "Kapture"
 
 seq(StartScriptPlugin.startScriptForClassesSettings: _*)
 
@@ -10,15 +10,14 @@ libraryDependencies ++= Seq(
 	"com.typesafe.akka" % "akka-actor" % "2.0.2",
     "com.typesafe.akka" % "akka-slf4j" % "2.0.2",
     "net.sf.opencsv" % "opencsv" % "2.1",
-    "net.databinder" %% "dispatch-http" % "0.8.8",
+    "net.databinder.dispatch" %% "core" % "0.9.0",
     "org.eclipse.jetty" % "jetty-webapp" % "8.1.0.v20120127",
-    "net.liftweb" % "lift-json_2.9.1" % "2.4",
     "ch.qos.logback" % "logback-classic" % "1.0.0",
     "org.scalaj" % "scalaj-collection_2.9.1" % "1.2",
-    "joda-time" % "joda-time" % "2.1",
     "hirondelle.date4j" % "date4j" % "1.0" from "http://www.date4j.net/date4j.jar",
     "net.lag" % "configgy" % "2.0.0",
     "commons-io" % "commons-io" % "2.0.1",
+    "commons-codec" % "commons-codec" % "1.6",
     "com.fasterxml.uuid" % "java-uuid-generator" % "3.1.1",
     "cc.spray" % "spray-server" % "1.0-M2",
     "cc.spray" % "spray-client" % "1.0-M2",
@@ -66,7 +65,7 @@ traceLevel := 20
 
 logLevel := Level.Info
 
-mainClass in Compile := Some("kapture.util.Boot")
+mainClass in Compile := Some("util.Boot")
 
 artifactName := { (config: String, module: ModuleID, artifact: Artifact) =>
   artifact.name + "." + artifact.extension
