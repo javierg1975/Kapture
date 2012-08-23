@@ -42,7 +42,7 @@ trait KaptureUI extends Directives with SprayJsonSupport {
           }~
             get{
               completeWith{
-                CommentDAO.find(MongoDBObject("kaptureId" -> kaptureId)).toList
+                CommentDAO.find(MongoDBObject("kaptureId" -> new ObjectId(kaptureId))).toList
               }
             }
         }
