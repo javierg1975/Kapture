@@ -9,6 +9,7 @@ import dal.{UserDAO, KaptureDAO}
 import core.Kapture
 import org.bson.types.ObjectId
 import com.mongodb.casbah.commons.MongoDBObject
+import util.json.KaptureProtocol._
 
 trait Debugger {
   import org.slf4j._
@@ -54,7 +55,7 @@ trait KaptureUI extends Directives with SprayJsonSupport {
             //UserDAO.findOne(MongoDBObject("name" -> userName))
 
             KaptureDAO.find(MongoDBObject("ownerId" -> user.get.id)).toList
-            ""
+
           }
         }
       }
