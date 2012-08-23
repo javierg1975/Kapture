@@ -1,19 +1,130 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
- "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head profile="http://www.w3.org/2005/10/profile">
-    <!-- Individual YUI CSS files -->
-    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/yui/2.8.2r1/build/reset-fonts-grids/reset-fonts-grids.css">
-    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/yui/2.8.2r1/build/base/base-min.css">
-    <link rel="stylesheet" type="text/css" href="style/basic.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-    <script src="lib/pure.js" type="text/javascript"></script>
 
-    <title>Kapture</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Kapture | Kaplan Test Prep</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-</head>
-<body>
-	<h1>Kapture placeholder</h1>
-</body>
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+
+      .btn-share-this { float: right; margin: -30px 0px 0 0; }
+
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit" style="display: none;">
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+      </div>
+
+      <div class="row">
+        <div class="span2">
+          <a href="#"> <!-- the thumbnail class helps put the logo -->
+          <img src="http://placehold.it/90&amp;text=Avatar" alt=""> <!-- the logo image -->
+          </a>
+        </div>
+        <div class="span6">
+          <h1>Lorin's Kapture Board</h1>
+        </div>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="clearfix kapture-list">
+        <div class="span3 kapture-item">
+          <h2>Title1</h2>
+          <div class="btn-share-this"><span class="st_sharethis" displayText=""></span></div>
+          <a><img alt=""></a>
+       </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Kaplan Test Prep 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script src="assets/js/pure.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ur-d07ea1d1-a81b-29e6-d904-c5e548d76d59"}); </script>
+
+    <script>
+    // kaptures is an array and will trigger an iteration
+    // var data = {
+    //   kaptures:[
+    //     { "id": { "_id": "503669ae0364dc9799f0a95d" }, "ownerId": { "_id": "50364efd0364340dc41f21e0" }, "title": "A test Kapture", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis leo at massa interdum quis blandit turpis laoreet. Suspendisse sodales nisi eu magna fringilla nec commodo lacus placerat. Sed bibendum sagittis elementum. Aenean sit amet lacus varius sapien porta laoreet. In eleifend tincidunt tempus. Praesent ultrices mauris non turpis vestibulum tincidunt porttitor quam ultricies.", "content": "http://api.url2png.com/v3/P5035480CECD5B/7b9245977a27acb7e004ecc5d834f61b/300x300/kaptest.com", "contentUri": "kaptest.com" },
+    //     { "id": { "_id": "503669ae0364dc9799f0a95e" }, "ownerId": { "_id": "50364efd0364340dc41f21e0" }, "title": "A test Kapture", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis leo at massa interdum quis blandit turpis laoreet. Suspendisse sodales nisi eu magna fringilla nec commodo lacus placerat. Sed bibendum sagittis elementum. Aenean sit amet lacus varius sapien porta laoreet. In eleifend tincidunt tempus. Praesent ultrices mauris non turpis vestibulum tincidunt porttitor quam ultricies.", "content": "http://api.url2png.com/v3/P5035480CECD5B/198fb61a5f84023a78414634e1c37106/300x300/nytimes.com", "contentUri": "nytimes.com" },
+    //     { "id": { "_id": "503669ae0364dc9799f0a95f" }, "ownerId": { "_id": "50364efd0364340dc41f21e0" }, "title": "A test Kapture", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis leo at massa interdum quis blandit turpis laoreet. Suspendisse sodales nisi eu magna fringilla nec commodo lacus placerat. Sed bibendum sagittis elementum. Aenean sit amet lacus varius sapien porta laoreet. In eleifend tincidunt tempus. Praesent ultrices mauris non turpis vestibulum tincidunt porttitor quam ultricies.", "content": "http://api.url2png.com/v3/P5035480CECD5B/e171e1d3a1d29fb65c9e8ab26989dd94/300x300/cnn.com", "contentUri": "cnn.com" }
+    //   ]
+    // };
+
+
+  </script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+          //$.getJSON('api/user/[some-user-name-here]/kaptures', function(data){
+
+     var data = {
+       kaptures:[
+         { "id": { "_id": "503669ae0364dc9799f0a95d" }, "ownerId": { "_id": "50364efd0364340dc41f21e0" }, "title": "A test Kapture", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis leo at massa interdum quis blandit turpis laoreet. Suspendisse sodales nisi eu magna fringilla nec commodo lacus placerat. Sed bibendum sagittis elementum. Aenean sit amet lacus varius sapien porta laoreet. In eleifend tincidunt tempus. Praesent ultrices mauris non turpis vestibulum tincidunt porttitor quam ultricies.", "content": "http://api.url2png.com/v3/P5035480CECD5B/7b9245977a27acb7e004ecc5d834f61b/300x300/kaptest.com", "contentUri": "kaptest.com" },
+         { "id": { "_id": "503669ae0364dc9799f0a95e" }, "ownerId": { "_id": "50364efd0364340dc41f21e0" }, "title": "A test Kapture", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis leo at massa interdum quis blandit turpis laoreet. Suspendisse sodales nisi eu magna fringilla nec commodo lacus placerat. Sed bibendum sagittis elementum. Aenean sit amet lacus varius sapien porta laoreet. In eleifend tincidunt tempus. Praesent ultrices mauris non turpis vestibulum tincidunt porttitor quam ultricies.", "content": "http://api.url2png.com/v3/P5035480CECD5B/198fb61a5f84023a78414634e1c37106/300x300/nytimes.com", "contentUri": "nytimes.com" },
+         { "id": { "_id": "503669ae0364dc9799f0a95f" }, "ownerId": { "_id": "50364efd0364340dc41f21e0" }, "title": "A test Kapture", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis leo at massa interdum quis blandit turpis laoreet. Suspendisse sodales nisi eu magna fringilla nec commodo lacus placerat. Sed bibendum sagittis elementum. Aenean sit amet lacus varius sapien porta laoreet. In eleifend tincidunt tempus. Praesent ultrices mauris non turpis vestibulum tincidunt porttitor quam ultricies.", "content": "http://api.url2png.com/v3/P5035480CECD5B/e171e1d3a1d29fb65c9e8ab26989dd94/300x300/cnn.com", "contentUri": "cnn.com" }
+       ]
+     };
+
+              var directive = {
+                '.kapture-item':{
+                  'kapture<-kaptures' : {
+                    'h2' : 'kapture.title',
+                    'a@href' : 'kapture.contentUri',
+                    'img@src' : 'kapture.content'
+                  }
+                }
+              };
+
+              $('div.kapture-list').render(data, directive);
+          //});
+        });
+    </script>
+  </body>
 </html>
