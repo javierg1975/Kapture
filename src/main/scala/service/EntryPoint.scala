@@ -29,25 +29,7 @@ trait KaptureUI extends Directives with SprayJsonSupport {
       getFromDirectory("src/main/webapp/")
     }~
     pathPrefix("api"){
-      path("kapture"){
-        post{
-          content(as[FormData]) { formData =>
 
-            val target = formData.fields("target")
-            val text = formData.fields("text")
-            val title = formData.fields("title")
-
-            val kapture = WebImageRenderer.imageUrl(target)
-
-            // save `kapture` in database for current user   (right now only works for Lauren)
-            val _id = KaptureDAO.insert(Kapture(ownerId = user.get.id, text = text, title = title, content = kapture, contentUri = target))
-
-            // post kapture in twitter
-            completeWith(kapture)
-          }
-
-        }
-      }~
       pathPrefix("user" / PathElement) {userName =>
         path("kaptures"){
           get{
@@ -57,6 +39,23 @@ trait KaptureUI extends Directives with SprayJsonSupport {
 
               new UserDAO(user.get).kaptures
             }
+          }~
+          post{
+            content(as[FormData]) { formData =>
+
+              val target = formData.fields("target")
+              val text = formData.fields("text")
+              val title = formData.fields("title")
+
+              val kapture = WebImageRenderer.imageUrl(target)
+
+              // save `kapture` in database for current user   (right now only works for Lauren)
+              val _id = KaptureDAO.insert(Kapture(ownerId = user.get.id, text = text, title = title, content = kapture, contentUri = target))
+
+              // post kapture in twitter
+              completeWith(kapture)
+            }
+
           }
         }~
         path("rss"){

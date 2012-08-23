@@ -3,7 +3,7 @@ package util.web
 import com.sun.syndication.feed.synd._
 import core.{Kapture, User}
 import util.date._
-import dal.{UserDAO, KaptureDAO}
+import dal.UserDAO
 import scalaj.collection.Imports._
 import java.io.StringWriter
 import com.sun.syndication.io.SyndFeedOutput
